@@ -1,0 +1,12 @@
+[Unit]
+Description=Wheather service
+Wants=network-online.target wttr.timer
+After=network-online.target
+
+[Service]
+Type=simple
+User=vagrant
+ExecStart=/home/vagrant/Documents/week10/wttr.sh
+
+[Install]
+WantedBy=multi-user.target

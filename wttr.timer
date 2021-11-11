@@ -1,0 +1,10 @@
+[Unit]
+Description=Run wttr daily
+Requires=wttr.service
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
